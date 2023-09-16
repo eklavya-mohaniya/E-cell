@@ -14,55 +14,70 @@ body{
 }
 
 .header{
-    /* position: fixed;
-    top:0;
-    right: 0; */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:  10px 100px;
+    padding:  0.5vw 5vw ;
     background-color: white;
     border-bottom: 2px solid gray ;
    
 }
+
 .header img{
-    width: 50px;
-    height: 50px;
+    width: 3vw;
+    height: 3vw;
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+
+nav .checkbox i {
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
 }
 
 .nav-bar {
     display: flex;
 }
 
+
 .nav-bar li a{
     color : black;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
     padding: 10px 20px;
     transition: 0.4s ease-out;
 }
 
+
+
+ 
 .nav-bar li a:hover{
     color : white;
     background-color: black;
     border-radius: 15px;
-    /* transform: scale(1.2) translatey(10px);
-    transition: 0.4s; */
-    
 }
 
 .box-container{
-    width: 1203px;
-    height: 385px;
-    margin: 100px 140px;
+    width: 100vw;
+    height: 55vh;
+    margin: 15vh 0vw;
+    padding: 0px 6vw;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .box{
-    width: 385px;
-    height: 385px;
-    margin: 0px 24px;
+    width: 25vw;
+    height: 25vw;
+    margin: 0px 0.8vw;
     border-radius: 15px;
     border: 1px solid black;
     
@@ -79,9 +94,9 @@ box-shadow: 2px 2px gray;
     
 }
 .box2 img{
-    width: 385px;
-    height: 385px;
-    padding:10px;
+    width: 25vw;
+    height: 25vw;
+    padding:0.8vw;
 }
 
 .box3{
@@ -89,79 +104,98 @@ box-shadow: 2px 2px gray;
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: repeat(3,100px);
-    grid-template-rows: repeat(3,100px) ;
-    gap: 4px;
+    grid-template-columns: repeat(3,6.66vw);
+    grid-template-rows: repeat(3,6.66vw) ;
+    gap: 0.4vw;
     box-shadow: inset  2px 2px 10px 5px gray;
     
 }
 .grid{
     background-color:#00407A;
-    /* width: 100px;
-    height: 100px; */
     border-radius: 15px;
     border: 1px solid black;
 }
 
-@media screen and (max-width : 744px)  and (min-width : 393px) {
-    .box-container{
-        display:block;
-    }
-    .box1{
-        width:681px;
-        margin: 20px;
-    }
 
-    .box2{
-        float:left;
-        margin-right:19px;
-    }
-    .box3,.box2{
-        width:335px;
-        height: 335px;
 
-    }
-    .box3{
-        grid-template-columns: repeat(3,80px);
-        grid-template-rows: repeat(3,80px) ;
-        gap: 4px;
 
-    }
-    .box2 img{
-        width: 335px;
-        height: 335px;
-        padding:10px;
-    }
+@media screen and  (max-width:  600px) {
+  nav .checkbox {
+    display: block;
+  }
 
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: #faf5ff;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+
+  ul li a {
+    font-size: 1.25rem;
+  }
+
+ 
+  .header img{
+    width: 10vw;
+    height: 10vw;
+}
+
+  .nav-bar i{
+    display: block;
+    font-size: 10vw;
+  }
+
+  .box-container{
+    display: block;
+    margin: 15vh 0vw;
+    padding: 0px 6vw;
+  }
+
+  .box{
+    width: 80vw;
+    height: 80vw;
+    margin: 0px 0.8vw;
+    
+}
+.box2{
+  margin: 5vw 0vw;
+}
+
+.box2 img{
+  width: 80vw;
+  height: 80vw;
+  padding:1.8vw;
+}
+
+.box3{
+  grid-template-columns: repeat(3,23.33vw);
+  grid-template-rows: repeat(3,23.33vw) ;
+  gap: 1vw;
+  box-shadow: inset  2px 2px 10px 5px gray;
+}
+  
 }
 
 
 
-@media screen and (max-width:393px){
-    .box-container{
-        display:block;
-        padding: 0px 30px;
-    }
-    .box{
-        margin:15px;
-        width:250px;
-        height: 250px;
 
-    }
-    .box3{
-        grid-template-columns: repeat(3,60px);
-        grid-template-rows: repeat(3,60px) ;
-        gap: 4px;
 
-    }
-    .box2 img{
-        width: 250px;
-        height: 250px;
-        padding:10px;
-    }
 
-}
 
+
+
+
+/* home page css */ 
 
 .section {
     background-color: #faf5ff;
@@ -201,16 +235,11 @@ box-shadow: 2px 2px gray;
   .title span {
     font-weight: 600;
   }
-  
-  .description {
-    line-height: 1.5rem;
-    color: #6b7280;
-    margin-bottom: 2rem;
-  }
-  
+
   .action__btns {
     display: flex;
     gap: 1rem;
+    margin-top: 50px;
   }
   
   .action__btns button {
@@ -272,3 +301,6 @@ box-shadow: 2px 2px gray;
         margin: auto;
       }
   }
+
+
+
