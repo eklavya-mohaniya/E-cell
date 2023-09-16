@@ -57,10 +57,14 @@ grid8.addEventListener('click' , function(){
 });
 
 grid9.addEventListener('click' ,  function(){
+    grid9.style.backgroundColor = "#7A0000";
+    arr.push("grid9");
+
     for(let i=0;i<arr.length;i++){
         setTimeout(function(){let x=document.getElementById(arr[i]);x.style.backgroundColor = "#00407A";},1000*i);
         
         
     }
 } )
+
 
