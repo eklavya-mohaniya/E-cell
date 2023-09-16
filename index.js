@@ -61,7 +61,7 @@ grid9.addEventListener('click' ,  function(){
     arr.push("grid9");
 
     for(let i=0;i<arr.length;i++){
-        setTimeout(function(){let x=document.getElementById(arr[i]);x.style.backgroundColor = "#00407A";},1000*i);
+        setTimeout(function(){let x=document.getElementById(arr[i]);x.style.backgroundColor = "#00407A";},500*i);
         
         
     }
